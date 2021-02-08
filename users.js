@@ -29,7 +29,7 @@ $(document).ready(() => {
         $("#search").on("keypress", async (e)=>{
             if(e.keyCode=='13'){
                 var searchValue = e.target.value
-                if(searchValue.length>1){
+                if(searchValue.length >= 2){
                     getSearchList(searchValue).then(resp =>{
                         if(resp){
                             $('.row').remove()
